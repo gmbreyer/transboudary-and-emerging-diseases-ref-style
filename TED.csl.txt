@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" and="symbol" default-locale="en-US" demote-non-dropping-particle="never">
+  <info>
+    <title>Transboundary and Emerging Diseases</title>
+    <id>http://www.zotero.org/styles/transboundary-and-emerging-diseases</id>
+    <link href="http://www.zotero.org/styles/transboundary-and-emerging-diseases" rel="self"/>
+    <link href="http://www.zotero.org/styles/zeitschrift-fur-soziologie" rel="template"/>
+    <link href="http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1865-1682/homepage/ForAuthors.html" rel="documentation"/>
+    <author>
+      <name>Laura Martin</name>
+      <email>leros.martin@gmail.com</email>
+    </author>
+    <contributor>
+      <name>Patrick O'Brien</name>
+      <email>obrienpat86@gmail.com</email>
+    </contributor>
+    <category citation-format="numeric"/>
+    <category field="biology"/>
+    <category field="medicine"/>
+    <issn>1865-1674</issn>
+    <eissn>1865-1682</eissn>
+    <updated>2017-01-20T10:28:04+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <!-- Citation Style Update: Change the citation to numeric format -->
+  <citation and="symbol" delimiter-precedes-et-al="never" delimiter-precedes-last="never" et-al-min="3" et-al-use-first="1" sort-separator=",   " names-delimiter=",  " disambiguate-add-names="true" disambiguate-add-givenname="true" disambiguate-add-year-suffix="true" givenname-disambiguation-rule="primary-name" collapse="year" year-suffix-delimiter=", ">
+    <sort>
+      <key macro="issued-sort"/>
+    </sort>
+    <layout delimiter="; " prefix="[" suffix="]">
+      <group delimiter=", ">
+        <text macro="author-short"/>
+        <text macro="issued-year"/>
+      </group>
+      <group prefix=": ">
+        <text macro="citation-locator"/>
+      </group>
+    </layout>
+  </citation>
+  <bibliography name-delimiter=", " and="symbol" delimiter-precedes-et-al="never" delimiter-precedes-last="always" entry-spacing="0" hanging-indent="true">
+    <sort>
+      <key macro="author"/>
+      <key macro="issued-sort" sort="ascending"/>
+    </sort>
+    <layout>
+      <group suffix=".">
+        <group>
+          <text macro="author"/>
+          <text macro="issued"/>
+          <text macro="title" prefix=" "/>
+          <text macro="locators"/>
+          <text macro="container"/>
+          <choose>
+            <if type="article article-journal" match="any">
+              <group delimiter=", ">
+                <text variable="volume" font-weight="bold" prefix=" "/>
+                <text variable="page" form="long"/>
+                <text variable="DOI" prefix="DOI: "/>
+              </group>
+            </if>
+            <else-if type="chapter" match="any"/>
+            <else-if type="webpage post-weblog" match="any">
+              <group delimiter=" " prefix=" ">
+                <text term="available at" text-case="capitalize-first"/>
+                <text variable="URL"/>
+                <group delimiter=" " prefix="(" suffix=")">
+                  <text term="accessed"/>
+                  <date form="text" variable="accessed"/>
+                </group>
+              </group>
+            </else-if>
+          </choose>
+        </group>
+        <group delimiter=", " prefix=". ">
+          <text macro="event"/>
+          <text macro="publisher"/>
+        </group>
+      </group>
+    </layout>
+  </bibliography>
+</style>
